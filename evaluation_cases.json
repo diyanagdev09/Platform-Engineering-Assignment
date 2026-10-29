@@ -1,0 +1,33 @@
+
+[
+  {
+    "id": 1,
+    "question": "What is retrieval augmented generation and how does it work?",
+    "test_type": "Basic research",
+    "expected_behavior": "The agent should retrieve background information and scholarly results, provide source links, and disclose limitations."
+  },
+  {
+    "id": 2,
+    "question": "Compare vector databases for a small RAG application.",
+    "test_type": "Comparison",
+    "expected_behavior": "The agent should retrieve multiple findings that help with comparison and avoid claiming a complete comparison when evidence is insufficient."
+  },
+  {
+    "id": 3,
+    "question": "What are the benefits and limitations of multi-agent AI systems?",
+    "test_type": "Balanced research",
+    "expected_behavior": "The agent should gather relevant results and acknowledge that search snippets alone may not establish all benefits and limitations."
+  },
+  {
+    "id": 4,
+    "question": "   ",
+    "test_type": "Invalid input",
+    "expected_behavior": "The agent should reject the empty question without calling either research tool."
+  },
+  {
+    "id": 5,
+    "question": "Research an obscure topic with no matching results: QXZ-9482-ZZZ",
+    "test_type": "Low-result scenario",
+    "expected_behavior": "The agent should handle zero usable results gracefully and must not invent findings or sources."
+  }
+]

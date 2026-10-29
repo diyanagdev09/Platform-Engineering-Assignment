@@ -1,0 +1,129 @@
+{
+  "run_at": "2026-10-30T03:02:04",
+  "total": 5,
+  "passed": 5,
+  "failed": 0,
+  "results": [
+    {
+      "id": 1,
+      "question": "What is retrieval augmented generation and how does it work?",
+      "test_type": "Basic research",
+      "expected_behavior": "The agent should retrieve background information and scholarly results, provide source links, and disclose limitations.",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "Structured report",
+          "passed": true
+        },
+        {
+          "name": "Findings and sources have valid format",
+          "passed": true
+        },
+        {
+          "name": "At least one finding has an HTTPS link",
+          "passed": true
+        }
+      ],
+      "error": null,
+      "result_summary": "Collected 10 research results. The findings below are source-backed starting points, not a verified synthesis of the topic.",
+      "finding_count": 10,
+      "source_count": 10
+    },
+    {
+      "id": 2,
+      "question": "Compare vector databases for a small RAG application.",
+      "test_type": "Comparison",
+      "expected_behavior": "The agent should retrieve multiple findings that help with comparison and avoid claiming a complete comparison when evidence is insufficient.",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "Structured report",
+          "passed": true
+        },
+        {
+          "name": "Findings and sources have valid format",
+          "passed": true
+        },
+        {
+          "name": "At least one finding has an HTTPS link",
+          "passed": true
+        }
+      ],
+      "error": null,
+      "result_summary": "Collected 10 research results. The findings below are source-backed starting points, not a verified synthesis of the topic.",
+      "finding_count": 10,
+      "source_count": 10
+    },
+    {
+      "id": 3,
+      "question": "What are the benefits and limitations of multi-agent AI systems?",
+      "test_type": "Balanced research",
+      "expected_behavior": "The agent should gather relevant results and acknowledge that search snippets alone may not establish all benefits and limitations.",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "Structured report",
+          "passed": true
+        },
+        {
+          "name": "Findings and sources have valid format",
+          "passed": true
+        },
+        {
+          "name": "At least one finding has an HTTPS link",
+          "passed": true
+        }
+      ],
+      "error": null,
+      "result_summary": "Collected 10 research results. The findings below are source-backed starting points, not a verified synthesis of the topic.",
+      "finding_count": 10,
+      "source_count": 10
+    },
+    {
+      "id": 4,
+      "question": "   ",
+      "test_type": "Invalid input",
+      "expected_behavior": "The agent should reject the empty question without calling either research tool.",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "Empty question rejected",
+          "passed": true
+        }
+      ],
+      "error": null,
+      "result_summary": "Please enter a research question.",
+      "finding_count": 0,
+      "source_count": 0
+    },
+    {
+      "id": 5,
+      "question": "Research an obscure topic with no matching results: QXZ-9482-ZZZ",
+      "test_type": "Low-result scenario",
+      "expected_behavior": "The agent should handle zero usable results gracefully and must not invent findings or sources.",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "Structured report",
+          "passed": true
+        },
+        {
+          "name": "Findings and sources have valid format",
+          "passed": true
+        },
+        {
+          "name": "At least one finding has an HTTPS link",
+          "passed": true
+        },
+        {
+          "name": "Low-result scenario handled",
+          "passed": true
+        }
+      ],
+      "error": null,
+      "result_summary": "Research could not be completed.",
+      "finding_count": 0,
+      "source_count": 0
+    }
+  ]
+}
